@@ -15,10 +15,7 @@ public class CustomerServiceImpl implements CustomerService {
     CustomerRepository customerRepository;
 
     public Customer getCustomerById(Long customerId) {
-        List<Customer> customers = new ArrayList<>();
-
         Optional<Customer> customer = customerRepository.findById(customerId);
-        System.out.println("Customer=" + customer);
         return customer.get();
     }
 }
